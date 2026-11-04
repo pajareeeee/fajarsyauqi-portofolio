@@ -310,6 +310,33 @@
     if (e.target === dlg) dlg.close();
   });
 
+  // Certificate lightbox
+  var lb = document.getElementById("lightbox");
+  document.querySelectorAll(".cert img").forEach(function (img) {
+    img.tabIndex = 0;
+    function open() {
+      document.getElementById("lb-img").src = img.currentSrc || img.src;
+      document.getElementById("lb-img").alt = img.alt;
+      var h = img.parentElement.querySelector("h3");
+      document.getElementById("lb-cap").textContent = h ? h.textContent : img.alt;
+      if (lb.showModal) lb.showModal();
+      else lb.setAttribute("open", "");
+    }
+    img.addEventListener("click", open);
+    img.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        open();
+      }
+    });
+  });
+  document.getElementById("lb-close").addEventListener("click", function () {
+    lb.close();
+  });
+  lb.addEventListener("click", function (e) {
+    if (e.target === lb) lb.close();
+  });
+
   // Cursor spotlight on cards
   document.querySelectorAll(".card,.cert,.spot,.links li").forEach(function (el) {
     el.addEventListener("pointermove", function (e) {

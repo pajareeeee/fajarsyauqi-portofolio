@@ -885,8 +885,8 @@ h1 {
 /* certificates */
 .cert-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 .cert {
   background: var(--bg-2);
@@ -905,8 +905,9 @@ h1 {
 }
 .cert img {
   width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  aspect-ratio: 13/9;
+  object-fit: contain;
+  cursor: zoom-in;
   background: var(--thumb-bg);
   margin-bottom: 16px;
   transition: transform 0.6s var(--ease);
@@ -1107,7 +1108,7 @@ dialog h4 {
 /* responsive */
 @media (max-width: 1000px) {
   .cert-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 900px) {
@@ -1353,4 +1354,24 @@ dialog h4 {
   .exp-card {
     padding: 26px;
   }
+}
+
+/* certificate lightbox */
+dialog.lightbox {
+  width: min(1100px, calc(100% - 24px));
+  padding: 14px;
+  text-align: center;
+}
+dialog.lightbox img {
+  display: block;
+  width: 100%;
+  max-height: calc(100svh - 150px);
+  object-fit: contain;
+  background: var(--thumb-bg);
+}
+dialog.lightbox p {
+  margin: 12px 56px 4px 4px;
+  color: var(--soft);
+  font-size: 0.95rem;
+  text-align: left;
 }
