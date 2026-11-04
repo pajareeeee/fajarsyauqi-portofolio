@@ -336,6 +336,7 @@ h1 {
 }
 .hero-visual {
   color: var(--chart);
+  perspective: 1000px;
 }
 .photo-frame {
   aspect-ratio: 4/5;
@@ -343,8 +344,9 @@ h1 {
   border: 1px solid var(--line);
   box-shadow: 14px 14px 0 rgba(var(--accent-rgb), 0.22);
   overflow: hidden;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   transition:
-    transform 0.6s var(--ease),
+    transform 0.25s ease-out,
     box-shadow 0.4s;
 }
 .photo-frame img {
@@ -354,7 +356,7 @@ h1 {
   object-position: center top;
 }
 .hero-visual:hover .photo-frame {
-  transform: translate(-4px, -4px);
+  transform: translate(-4px, -4px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   box-shadow: 20px 20px 0 rgba(var(--accent-rgb), 0.3);
 }
 .chart-card {
@@ -365,14 +367,14 @@ h1 {
   background: var(--bg-2);
   border: 1px solid var(--line);
   padding: 14px 14px 8px;
-  transform: rotate(-3deg);
+  transform: translate(var(--px, 0px), var(--py, 0px)) rotate(-3deg);
   transition:
-    transform 0.6s var(--ease),
+    transform 0.25s ease-out,
     border-color 0.3s;
   box-shadow: 0 30px 60px -20px var(--sh);
 }
 .hero-visual:hover .chart-card {
-  transform: rotate(0);
+  transform: translate(var(--px, 0px), var(--py, 0px)) rotate(0);
   border-color: var(--accent);
 }
 .chart-card svg {

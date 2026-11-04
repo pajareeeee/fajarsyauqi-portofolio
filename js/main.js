@@ -321,6 +321,25 @@
     if (e.target === lb) lb.close();
   });
 
+  // 3D tilt on the hero photo (desktop with a mouse only)
+  var hv = document.querySelector(".hero-visual");
+  if (hv && matchMedia("(hover: hover) and (pointer: fine)").matches && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    hv.addEventListener("pointermove", function (e) {
+      var r = hv.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5;
+      var y = (e.clientY - r.top) / r.height - 0.5;
+      hv.style.setProperty("--ry", (x * 14).toFixed(2) + "deg");
+      hv.style.setProperty("--rx", (-y * 14).toFixed(2) + "deg");
+      hv.style.setProperty("--px", (-x * 14).toFixed(1) + "px");
+      hv.style.setProperty("--py", (-y * 14).toFixed(1) + "px");
+    });
+    hv.addEventListener("pointerleave", function () {
+      ["--rx", "--ry", "--px", "--py"].forEach(function (p) {
+        hv.style.removeProperty(p);
+      });
+    });
+  }
+
   // Cursor spotlight on cards
   document.querySelectorAll(".card,.cert,.spot,.links li").forEach(function (el) {
     el.addEventListener("pointermove", function (e) {
