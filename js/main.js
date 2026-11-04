@@ -320,7 +320,7 @@
   });
 
   // Stagger reveal inside grids
-  document.querySelectorAll(".grid-2 .reveal,.cert-list .reveal").forEach(function (el, i) {
+  document.querySelectorAll(".grid-2 .reveal,.cert-list .reveal,.edu-grid .reveal").forEach(function (el, i) {
     el.dataset.d = (i % 3) * 90 + "ms";
     el.style.transitionDelay = el.dataset.d;
   });

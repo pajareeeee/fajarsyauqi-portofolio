@@ -1137,6 +1137,27 @@ dialog h4 {
   }
 }
 @media (max-width: 720px) {
+  .grid-2,
+  .skill-grid,
+  .cert-list {
+    grid-template-columns: 1fr;
+  }
+  .links li {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .links span {
+    order: -1;
+  }
+  .stats {
+    gap: 12px 28px;
+  }
+  .chip {
+    font-size: 0.78rem;
+    padding: 6px 14px;
+  }
+}
+@media (max-width: 960px) {
   .burger {
     display: block;
   }
@@ -1162,25 +1183,6 @@ dialog h4 {
   .menu a {
     padding: 13px 14px;
     font-size: 1.05rem;
-  }
-  .grid-2,
-  .skill-grid,
-  .cert-list {
-    grid-template-columns: 1fr;
-  }
-  .links li {
-    flex-direction: column;
-    gap: 4px;
-  }
-  .links span {
-    order: -1;
-  }
-  .stats {
-    gap: 12px 28px;
-  }
-  .chip {
-    font-size: 0.78rem;
-    padding: 6px 14px;
   }
 }
 @media (hover: none) {
@@ -1275,6 +1277,80 @@ dialog h4 {
 }
 @media (max-width: 900px) {
   .card-wide .card-body {
+    padding: 26px;
+  }
+}
+
+/* education */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+}
+.edu-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.edu-card:hover {
+  border-color: var(--accent);
+}
+.edu-card h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+.edu-major {
+  color: var(--soft);
+}
+.edu-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+@media (max-width: 900px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* experience */
+.exp-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.exp-card:hover {
+  border-color: var(--accent);
+}
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px 24px;
+  flex-wrap: wrap;
+}
+.exp-head h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+.exp-company {
+  color: var(--soft);
+}
+.exp-place {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+@media (max-width: 720px) {
+  .exp-card {
     padding: 26px;
   }
 }
