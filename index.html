@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fajar Syauqi — Data Analytics Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Fajar Syauqi, Information Systems student focused on Data Analytics."
+    />
+    <meta property="og:title" content="Fajar Syauqi — Data Analytics Portfolio" />
+    <meta
+      property="og:description"
+      content="Python, SQL, Power BI, and Excel projects by Fajar Syauqi, Information Systems student focused on Data Analytics."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='9' y='9' width='14' height='14' fill='%234f8cff' transform='rotate(45 16 16)'/%3E%3C/svg%3E"
+    />
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+      <a class="brand" href="#top">Fajar Syauqi</a>
+      <button class="theme" id="theme" aria-label="Switch to light theme" title="Switch theme"></button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+      <nav id="menu" class="menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact" class="menu-cta">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <span class="bg-word" aria-hidden="true">DATA</span>
+        <div class="hero-text">
+          <p class="hero-role"><span class="pulse"></span>Open to Data Analyst opportunities</p>
+          <h1>Turning Data Into Meaningful <span class="hl">Insights.</span></h1>
+          <p class="hero-intro">
+            Hi, I'm <strong>Fajar Syauqi</strong>, an Information Systems student who enjoys cleaning messy data,
+            exploring it, and turning it into something people can use to make decisions. This site collects the
+            analytics projects I've built so far.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+          </div>
+          <ul class="stats">
+            <li><b>4</b><span>Featured projects</span></li>
+            <li><b>8</b><span>Certificates</span></li>
+            <li><b>4</b><span>Tools: Python, SQL, Power BI, Excel</span></li>
+          </ul>
+        </div>
+        <figure class="hero-visual">
+          <div class="photo-frame"><img src="assets/profile.jpg" alt="Photo of Fajar Syauqi" data-fallback /></div>
+          <div class="chart-card" aria-hidden="true">
+            <svg viewBox="0 0 400 300" fill="none">
+              <g class="grid-lines" stroke="currentColor">
+                <line x1="0" y1="60" x2="400" y2="60" />
+                <line x1="0" y1="120" x2="400" y2="120" />
+                <line x1="0" y1="180" x2="400" y2="180" />
+                <line x1="0" y1="240" x2="400" y2="240" />
+              </g>
+              <g class="bars" fill="currentColor">
+                <rect x="30" y="190" width="34" height="50" />
+                <rect x="100" y="160" width="34" height="80" />
+                <rect x="170" y="175" width="34" height="65" />
+                <rect x="240" y="120" width="34" height="120" />
+                <rect x="310" y="90" width="34" height="150" />
+              </g>
+              <polyline
+                class="trend"
+                points="47,175 117,140 187,155 257,95 327,55"
+                stroke="var(--accent)"
+                stroke-width="3"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                pathLength="1"
+              />
+              <g fill="var(--accent)">
+                <circle cx="47" cy="175" r="5" />
+                <circle cx="117" cy="140" r="5" />
+                <circle cx="187" cy="155" r="5" />
+                <circle cx="257" cy="95" r="5" />
+                <circle cx="327" cy="55" r="5" />
+              </g>
+            </svg>
+          </div>
+          <span class="chip c1" aria-hidden="true">SQL</span><span class="chip c2" aria-hidden="true">Python</span
+          ><span class="chip c3" aria-hidden="true">Power BI</span><span class="chip c4" aria-hidden="true">Excel</span>
+        </figure>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="track">
+          <span>SQL</span><span>Python</span><span>Pandas</span><span>Power BI</span><span>DAX</span><span>Excel</span
+          ><span>MySQL</span><span>EDA</span><span>Data Cleaning</span><span>Data Modeling</span> <span>SQL</span
+          ><span>Python</span><span>Pandas</span><span>Power BI</span><span>DAX</span><span>Excel</span
+          ><span>MySQL</span><span>EDA</span><span>Data Cleaning</span><span>Data Modeling</span>
+        </div>
+      </div>
+
+      <section class="section" id="about">
+        <h2>About me</h2>
+        <div class="about-grid">
+          <div class="about-body">
+            <p>
+              I'm a student of Information Systems at Universitas Bina Sarana Informatika (UBSI). Somewhere along the
+              way, I realized the part of the field I enjoy most is working with data: finding out what's inside a
+              dataset, tidying it up, and making sense of it.
+            </p>
+            <p>
+              I'm interested in how a good analysis can support real decisions instead of just filling a report. I'm
+              still early in my journey and building my skills through projects, courses, and certifications.
+            </p>
+            <p>I'm currently looking for opportunities in Data Analytics where I can keep learning and contribute.</p>
+          </div>
+          <ul class="focus">
+            <li class="spot">
+              <strong>Data exploration</strong
+              ><span>Digging into a dataset to understand its shape, patterns, and gaps.</span>
+            </li>
+            <li class="spot">
+              <strong>Data processing</strong><span>Cleaning and structuring raw data so it's ready to analyze.</span>
+            </li>
+            <li class="spot">
+              <strong>Data visualization</strong
+              ><span>Turning findings into charts and dashboards that are quick to read.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          <div class="skill-block spot">
+            <h3>Data Analysis</h3>
+            <ul>
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>SQL</li>
+              <li>MySQL</li>
+              <li>Data Cleaning</li>
+              <li>Data Validation</li>
+              <li>Exploratory Data Analysis (EDA)</li>
+            </ul>
+          </div>
+          <div class="skill-block spot">
+            <h3>Data Visualization</h3>
+            <ul>
+              <li>Power BI</li>
+              <li>DAX</li>
+              <li>Data Modeling</li>
+              <li>Excel</li>
+              <li>Pivot Table</li>
+              <li>XLOOKUP</li>
+              <li>Matplotlib</li>
+            </ul>
+          </div>
+          <div class="skill-block spot">
+            <h3>Tools</h3>
+            <ul>
+              <li>Jupyter Notebook</li>
+              <li>Google Colab</li>
+              <li>VS Code</li>
+              <li>Git &amp; GitHub</li>
+              <li>phpMyAdmin</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Featured projects</h2>
+        <p class="section-lead">Four projects across Python, SQL, Power BI, and Excel.</p>
+
+        <div class="case-group">
+          <div class="case-head">
+            <h3>Gayanara E-Commerce Analysis</h3>
+            <p>
+              One online fashion store dataset, analyzed twice: first with Python, then with SQL. They are two
+              approaches to the same data, not two separate case studies.
+            </p>
+          </div>
+          <div class="grid-2">
+            <article class="card reveal">
+              <div class="thumb">
+                <img
+                  src="assets/projects/gayanara_python_tren_revenue_bulanan.webp"
+                  alt="Monthly revenue trend chart from the Gayanara Python analysis"
+                  data-fallback
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <p class="tag">Python approach</p>
+                <h4>Gayanara E-Commerce Analysis (Python)</h4>
+                <p>Sales analysis of an online fashion store, from deliberately messy data to business findings.</p>
+                <ul class="findings">
+                  <li>Rp1.27 billion revenue from 2,521 valid orders</li>
+                  <li>Promos used on 41% of orders, but those orders were about 6% smaller in value</li>
+                  <li>16% of orders failed, highest with J&amp;T and OVO</li>
+                </ul>
+                <ul class="tools">
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>Matplotlib</li>
+                  <li>Jupyter Notebook</li>
+                </ul>
+                <div class="card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://github.com/pajareeeee/gayanara_ecommerce_analysis"
+                    target="_blank"
+                    rel="noopener"
+                    >View Project</a
+                  >
+                  <button class="btn btn-ghost btn-sm" data-detail="python">View Details</button>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal">
+              <div class="thumb">
+                <img
+                  class="top"
+                  src="assets/projects/gayanara_sql_revenue_bulanan.webp"
+                  alt="Monthly revenue chart from the Gayanara SQL analysis"
+                  data-fallback
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <p class="tag">SQL approach</p>
+                <h4>Gayanara E-Commerce Analysis (SQL)</h4>
+                <p>
+                  The same sales data analyzed in MySQL: data cleaning with views, then revenue, categories, cities,
+                  promos, and failed orders.
+                </p>
+                <ul class="findings">
+                  <li>Rp1.27 billion revenue from 2,521 valid orders, averaging Rp501,920 per order</li>
+                  <li>Promos used on 41% of orders, with order value 6% lower after discount</li>
+                  <li>16% of orders failed; J&amp;T (18.4%) and OVO (18.7%) were highest</li>
+                </ul>
+                <ul class="tools">
+                  <li>MySQL</li>
+                  <li>SQL</li>
+                  <li>Data Cleaning</li>
+                  <li>Data Analysis</li>
+                </ul>
+                <div class="card-actions">
+                  <a
+                    class="btn btn-primary btn-sm"
+                    href="https://github.com/pajareeeee/gayanara_sql_analysis"
+                    target="_blank"
+                    rel="noopener"
+                    >View Project</a
+                  >
+                  <button class="btn btn-ghost btn-sm" data-detail="sql">View Details</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <article class="card card-wide reveal">
+          <div class="thumb">
+            <img
+              class="top"
+              src="assets/projects/sakumaya_01_nasabah_kyc.webp"
+              alt="Customers and KYC page of the Sakumaya Power BI dashboard"
+              data-fallback
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <p class="tag">Power BI</p>
+            <h4>Sakumaya Digital Bank Dashboard</h4>
+            <p>
+              A three-page dashboard for a fictional digital bank: Customers &amp; KYC, Transactions, and Credit &amp;
+              Risk.
+            </p>
+            <ul class="findings">
+              <li>
+                30% of customers are not KYC verified; 123 active accounts belong to customers with rejected or
+                unverified KYC
+              </li>
+              <li>13.3% of loans are problematic (40 of 300), highest for goods credit at 22.0%</li>
+              <li>9,800 successful transactions worth Rp81.5 billion, 2.0% failed rate, with flat annual volume</li>
+            </ul>
+            <ul class="tools">
+              <li>Power BI</li>
+              <li>DAX</li>
+              <li>Data Modeling</li>
+              <li>Data Visualization</li>
+            </ul>
+            <div class="card-actions">
+              <a
+                class="btn btn-primary btn-sm"
+                href="https://github.com/pajareeeee/sakumaya_powerbi_dashboard"
+                target="_blank"
+                rel="noopener"
+                >View Project</a
+              >
+              <button class="btn btn-ghost btn-sm" data-detail="sakumaya">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card-wide reveal">
+          <div class="thumb">
+            <img
+              class="top"
+              src="assets/projects/sedukopi_dashboard.webp"
+              alt="One-page Excel dashboard of the Sedukopi coffee shop analysis"
+              data-fallback
+              loading="lazy"
+            />
+          </div>
+          <div class="card-body">
+            <p class="tag">Excel</p>
+            <h4>Sedukopi Coffee Shop Sales Analysis</h4>
+            <p>
+              A one-page Excel dashboard for a fictional coffee shop chain: data validation, table joins with XLOOKUP,
+              Pivot Tables, and 8 charts.
+            </p>
+            <ul class="findings">
+              <li>Rp392.9 million revenue from 5,000 orders, with a 69.9% gross margin</li>
+              <li>Seven peak hours bring in about 78% of revenue</li>
+              <li>Seat capacity shows no link to revenue (correlation 0.08)</li>
+            </ul>
+            <ul class="tools">
+              <li>Excel</li>
+              <li>Pivot Table</li>
+              <li>XLOOKUP</li>
+              <li>Dashboard</li>
+            </ul>
+            <div class="card-actions">
+              <a
+                class="btn btn-primary btn-sm"
+                href="https://github.com/pajareeeee/sedukopi_excel_analysis"
+                target="_blank"
+                rel="noopener"
+                >View Project</a
+              >
+              <button class="btn btn-ghost btn-sm" data-detail="sedukopi">View Details</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="certificates">
+        <h2>Certificates</h2>
+        <div class="cert-list">
+          <article class="cert reveal">
+            <img
+              src="assets/certificates/associate-data-scientist.webp"
+              alt="Associate Data Scientist + Python certificate"
+              data-fallback
+              loading="lazy"
+            />
+            <h3>Associate Data Scientist + Python</h3>
+            <p>Digital Talent Academy / Digital Talent Scholarship, 2026</p>
+          </article>
+          <article class="cert reveal">
+            <img
+              src="assets/certificates/data-scientist-supervisor.webp"
+              alt="Data Scientist Supervisor certificate"
+              data-fallback
+              loading="lazy"
+            />
+            <h3>Data Scientist Supervisor</h3>
+            <p>Digital Talent Academy / Digital Talent Scholarship, 2026</p>
+          </article>
+          <article class="cert reveal">
+            <img
+              src="assets/certificates/visualisasi-data-pemerintahan.webp"
+              alt="Visualisasi Data Pemerintahan yang Efektif dan Menarik (Micro Skill) certificate"
+              data-fallback
+              loading="lazy"
+            />
+            <h3>Visualisasi Data Pemerintahan yang Efektif dan Menarik (Micro Skill)</h3>
+            <p>Digital Talent Scholarship, 2026</p>
+          </article>
+          <article class="cert reveal">
+            <img
+              src="assets/certificates/pengenalan-data-science.webp"
+              alt="Pengenalan Data Science dan Pemanfaatannya di Berbagai Sektor (Micro Skill) certificate"
+              data-fallback
+              loading="lazy"
+            />
+            <h3>Pengenalan Data Science dan Pemanfaatannya di Berbagai Sektor (Micro Skill)</h3>
+            <p>Digital Talent Scholarship, 2026</p>
+          </article>
+          <article class="cert reveal">
+            <img
+              src="assets/certificates/excel-101.webp"
+              alt="Excel 101: Belajar Excel dari Nol certificate"
+              data-fallback
+              loading="lazy"
+            />
+            <h3>Excel 101: Belajar Excel dari Nol</h3>
+            <p>Ngulik Data, 2026</p>
+          </article>
+          <article class="cert reveal">
+            <img
+              src="assets/certificates/sql-101.webp"
+              alt="SQL 101: Belajar SQL dari Nol certificate"
+              data-fallback
+              loading="lazy"
+            />
+            <h3>SQL 101: Belajar SQL dari Nol</h3>
+            <p>Ngulik Data, 2026</p>
+          </article>
+          <article class="cert reveal">
+            <img
+              src="assets/certificates/intro-data-analytics.webp"
+              alt="Intro to Data Analytics certificate"
+              data-fallback
+              loading="lazy"
+            />
+            <h3>Intro to Data Analytics</h3>
+            <p>RevoU Mini Course, 2026</p>
+          </article>
+          <article class="cert reveal">
+            <img
+              src="assets/certificates/database-sql.webp"
+              alt="Database Design and Database Programming with SQL certificate"
+              data-fallback
+              loading="lazy"
+            />
+            <h3>Database Design &amp; Database Programming with SQL</h3>
+            <p>Digital Talent Scholarship, 2024</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <h2 class="contact-title">Let's Connect and Create Something Meaningful.</h2>
+        <p class="section-lead">Open to Data Analytics opportunities. The fastest way to reach me is email.</p>
+        <ul class="links">
+          <li><a href="mailto:syauqifajar7@gmail.com">syauqifajar7@gmail.com</a><span>Email</span></li>
+          <li>
+            <a href="https://www.linkedin.com/in/fajarsyauqi/" target="_blank" rel="noopener"
+              >linkedin.com/in/fajarsyauqi</a
+            ><span>LinkedIn</span>
+          </li>
+          <li>
+            <a href="https://github.com/pajareeeee" target="_blank" rel="noopener">github.com/pajareeeee</a
+            ><span>GitHub</span>
+          </li>
+          <li>
+            <a href="https://instagram.com/fajarrsyi" target="_blank" rel="noopener">instagram.com/fajarrsyi</a
+            ><span>Instagram</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year">2026</span> Fajar Syauqi</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <dialog id="detail" aria-labelledby="d-title">
+      <button class="close" id="d-close" aria-label="Close details">Close</button>
+      <h3 id="d-title"></h3>
+      <p id="d-note" class="d-note"></p>
+      <p id="d-desc"></p>
+      <div id="d-gallery" class="d-gallery" hidden></div>
+      <h4>Key findings</h4>
+      <ul id="d-findings" class="findings"></ul>
+      <h4 id="d-insights-h" hidden>Insights &amp; recommendations</h4>
+      <ul id="d-insights" class="findings" hidden></ul>
+      <h4 id="d-limits-h" hidden>Limitations</h4>
+      <ul id="d-limits" class="findings" hidden></ul>
+      <h4>What it covers</h4>
+      <ul id="d-list" class="d-list"></ul>
+      <h4>Tools</h4>
+      <ul id="d-tools" class="tools"></ul>
+      <a id="d-link" class="btn btn-primary btn-sm" target="_blank" rel="noopener">View on GitHub</a>
+    </dialog>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
