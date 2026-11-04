@@ -25,27 +25,6 @@
   --nav-h: 68px;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-:root[data-theme="light"] {
-  color-scheme: light;
-  --bg: #f4f7fd;
-  --bg-2: #ffffff;
-  --bg-3: #eaf0fb;
-  --line: #dbe3f1;
-  --text: #0f1629;
-  --muted: #586279;
-  --soft: #2c3650;
-  --accent: #2563eb;
-  --accent-2: #1d4ed8;
-  --accent-ink: #fff;
-  --bg-rgb: 244, 247, 253;
-  --bg2-rgb: 255, 255, 255;
-  --accent-rgb: 37, 99, 235;
-  --text-rgb: 15, 22, 41;
-  --dots: rgba(37, 99, 235, 0.07);
-  --chart: #d6e0f3;
-  --thumb-bg: #e6edf9;
-  --sh: rgba(30, 60, 120, 0.22);
-}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -473,53 +452,6 @@ h1 {
   50% {
     transform: translateY(-8px);
   }
-}
-
-/* theme toggle */
-.theme {
-  width: 52px;
-  height: 28px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--bg-2);
-  cursor: pointer;
-  position: relative;
-  flex-shrink: 0;
-  transition:
-    border-color 0.2s,
-    background 0.3s;
-}
-.theme:hover {
-  border-color: var(--accent);
-}
-.theme::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--accent);
-  transition: transform 0.35s var(--ease);
-}
-:root[data-theme="light"] .theme::before {
-  transform: translateX(24px);
-}
-.theme::after {
-  content: "☾";
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  transform: translateY(-52%);
-  font-size: 0.8rem;
-  color: var(--muted);
-  line-height: 1;
-}
-:root[data-theme="light"] .theme::after {
-  content: "☀";
-  right: auto;
-  left: 7px;
 }
 
 /* buttons */
@@ -1162,7 +1094,7 @@ dialog h4 {
   .burger {
     display: block;
   }
-  .theme {
+  .burger {
     margin-left: auto;
   }
   .menu {

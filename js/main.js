@@ -15,22 +15,6 @@
     if (img.complete && img.naturalWidth === 0) swap();
   });
 
-  // Theme toggle
-  var themeBtn = document.getElementById("theme");
-  function syncTheme() {
-    var light = document.documentElement.dataset.theme === "light";
-    themeBtn.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
-  }
-  themeBtn.addEventListener("click", function () {
-    var next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem("theme", next);
-    } catch (e) {}
-    syncTheme();
-  });
-  syncTheme();
-
   // Mobile menu
   var burger = document.getElementById("burger");
   var menu = document.getElementById("menu");
