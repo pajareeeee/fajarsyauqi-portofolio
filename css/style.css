@@ -506,6 +506,28 @@ h1 {
   padding: 10px 20px;
   font-size: 0.88rem;
 }
+/* all buttons: neutral until hovered, no arrow */
+.btn::after {
+  content: none;
+}
+.btn.btn-primary,
+.btn.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: rgba(var(--text-rgb), 0.28);
+  box-shadow: none;
+}
+.btn.btn-primary {
+  border-color: rgba(var(--text-rgb), 0.55);
+}
+.btn.btn-primary:hover,
+.btn.btn-ghost:hover {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -10px rgba(var(--accent-rgb), 0.55);
+}
 
 /* marquee */
 .marquee {
