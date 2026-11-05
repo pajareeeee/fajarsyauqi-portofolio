@@ -863,14 +863,6 @@ h1 {
   padding: 0 4px;
 }
 
-.cert .cert-desc {
-  margin-top: 10px;
-  color: var(--soft);
-  line-height: 1.55;
-}
-.cert .tools {
-  margin: 14px 4px 0;
-}
 .cert .cert-link {
   margin: 16px 4px 0;
 }
