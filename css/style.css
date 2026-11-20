@@ -1372,3 +1372,30 @@ dialog.lightbox .close:hover {
   color: var(--accent-ink);
   border-color: var(--accent);
 }
+
+/* close buttons: draw the X with CSS so it is exactly centered */
+#detail .close,
+dialog.lightbox .close {
+  font-size: 0;
+}
+#detail .close::before,
+#detail .close::after,
+dialog.lightbox .close::before,
+dialog.lightbox .close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+#detail .close::before,
+dialog.lightbox .close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#detail .close::after,
+dialog.lightbox .close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
